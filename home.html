@@ -14,14 +14,120 @@
 <nav> 
     <a href="home.html" class="active">Home</a>
     <a href="artikel.html">Artikel</a>
-    <a href="about.html">About</a>
-    <a href="kontak.html">Kontak</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+
 </nav>
 <section id="hero">
     <section id="wrapper">
         <section id="main"></section>
         <aside id="sidebar"></aside>
     </section>
+<!-- ABOUT SECTION -->
+<hr class="divider">
+
+<section id="about" class="section">
+    <div class="section-heading">
+        <p class="subtitle">GET TO KNOW ME</p>
+        <h1>About Me</h1>
+
+        <p>
+            Saya adalah mahasiswa Informatika yang tertarik
+            dengan pengembangan web, desain UI/UX, dan teknologi.
+            Saya senang mempelajari hal baru dan membuat
+            proyek yang bermanfaat.
+        </p>
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-card">
+            <h2>My Skills</h2>
+            <p>
+                HTML, CSS, JavaScript, UI/UX Design,
+                dan Database.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h2>My Portfolio</h2>
+            <p>Beberapa proyek yang saya kerjakan:</p>
+            <ul>
+                <li>Personal Portfolio Website</li>
+                <li>Coffee Sales Dashboard</li>
+                <li>User Interface Design</li>
+            </ul>
+        </div>
+
+        <div class="about-card">
+            <h2>My Goals</h2>
+            <p>
+                Mengembangkan kemampuan software development
+                dan menciptakan solusi digital.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<hr class="divider">
+
+<section id="contact" class="section contact-section">
+
+    <div class="section-heading">
+        <p class="subtitle">LET'S CONNECT</p>
+        <h1>Contact Me</h1>
+        <p>
+            Silakan kirim pesan jika ingin bertanya
+            atau bekerja sama.
+        </p>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+
+        <label for="name">Nama Lengkap</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukkan nama lengkap"
+            required
+        >
+
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nama@email.com"
+            required
+        >
+
+        <label for="subject">Subjek</label>
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subjek pesan"
+            required
+        >
+
+        <label for="message">Pesan</label>
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Tulis pesan lu di sini..."
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
 </section>
 <footer>
     <p>&copy; 2021 - Universitas Pelita Bangsa</p>
@@ -54,34 +160,71 @@ tincidunt arcu. Proin in leo fringilla, vestibulum mi porta, faucibus felis.
 Integer pharetra est nunc, nec pretium nunc pretium ac.</p>
 </div>
 </aside>
+
 <section id="main">
     <div class="row">
-        <div class="box">
-            <img src="https://dummyimage.com/120/db7d25/fff.png" alt="" class="image-circle">
-            <h3>Heading</h3>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
-            <a href="#" class="btn btn-default">view details</a>
-        </div>
-    </div>
 
-    <div class="box">
-<img src="https://dummyimage.com/120/3e73e6/fff.png" alt=""
-class="image-circle">
-<h3>Heading</h3>
-<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-euismod.</p>
-<a href="#" class="btn btn-default">View detail</a>
-</div>
-<div class="box">
-<img src="https://dummyimage.com/120/71e6d4/fff.png" alt=""
-class="image-circle">
-<h3>Heading</h3>
-<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-euismod.</p>
-<a href="#" class="btn btn-default">View detail</a>
-</div>
-</div>
-</section>
+        <!-- Card 1 -->
+        <div class="box">
+            <img
+                src="https://dummyimage.com/120/db7d25/fff.png"
+                alt=""
+                class="image-circle"
+            >
+
+            <h3>Heading</h3>
+
+            <p>
+                Donec sed odio dui. Etiam porta sem malesuada
+                magna mollis euismod.
+            </p>
+
+            <a href="#" class="btn btn-default">
+                View details
+            </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="box">
+            <img
+                src="https://dummyimage.com/120/3e73e6/fff.png"
+                alt=""
+                class="image-circle"
+            >
+
+            <h3>Heading</h3>
+
+            <p>
+                Donec sed odio dui. Etiam porta sem malesuada
+                magna mollis euismod.
+            </p>
+
+            <a href="#" class="btn btn-default">
+                View details
+            </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="box">
+            <img
+                src="https://dummyimage.com/120/71e6d4/fff.png"
+                alt=""
+                class="image-circle"
+            >
+
+            <h3>Heading</h3>
+
+            <p>
+                Donec sed odio dui. Etiam porta sem malesuada
+                magna mollis euismod.
+            </p>
+
+            <a href="#" class="btn btn-default">
+                View details
+            </a>
+        </div>
+
+    </div>
 </section>
 
 
@@ -123,3 +266,4 @@ euismod.</p>
         faucibus felis. Integer pharetra est nunc, nec pretium nunc pretium ac.
     </p>
 </article>
+ 

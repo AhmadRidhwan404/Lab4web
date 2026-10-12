@@ -123,14 +123,11 @@ footer {
 
 /* box */
 .box {
-display:block;
-float:left;
-width:33.333333%;
-box-sizing:border-box;
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box;
-padding:0 10px;
-text-align:center;
+    float: none;
+    width: 33.333333%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
 }
 .box h3 {
 margin: 15px 0;
@@ -148,19 +145,16 @@ vertical-align: middle;
 border-radius: 50%;
 }
 .row {
-margin: 0 -10px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0 -10px;
+    box-sizing: border-box;
 }
-.row:after, .row:before,
-.entry:after, .entry:before {
-    content:'';
-display:table;
-}
-.row:after,
-.entry:after {
-clear:both;
+
+.row::after,
+.row::before {
+    content: none;
 }
 
 
@@ -277,4 +271,258 @@ main,
     width: 150px;
     height: 150px;
     margin: 0 0 10px 15px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+/* GENERAL SECTION */
+.section {
+    padding: 80px 8%;
+    scroll-margin-top: 20px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h1 {
+    font-size: 38px;
+    color: #172554;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    line-height: 1.7;
+    color: #64748b;
+}
+
+/* ABOUT */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.about-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+.about-card h2 {
+    color: #1e40af;
+    font-size: 20px;
+}
+
+.about-card p,
+.about-card li {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.about-card ul {
+    padding-left: 20px;
+}
+
+/* CONTACT */
+.contact-section {
+    background: #f8fafc;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+.contact-form label {
+    display: block;
+    margin: 16px 0 8px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section-heading h1 {
+        font-size: 30px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+/* About dan Contact di layout lama */
+#main .section {
+    padding: 40px 0;
+    scroll-margin-top: 20px;
+}
+
+#main .section-heading {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+#main .section-heading h1 {
+    font-size: 30px;
+}
+
+#main .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+#main .about-card {
+    min-width: 0;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+#main .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#main .contact-form input,
+#main .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main .contact-form button {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    #container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #main {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #sidebar {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #main .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 12px 14px;
+    }
 }
